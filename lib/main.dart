@@ -53,6 +53,16 @@ class _TodoListPageState extends State<TodoListPage> {
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
                     title: Text(todoList[index]),
+                    actions: [
+                      IconButton(
+                          icon: Icon(Icons.delete),
+                          color: Colors.red,
+                          onPressed: () {
+                            _deleteButton(index);
+                            Navigator.pop(context);
+                          },
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -81,6 +91,11 @@ class _TodoListPageState extends State<TodoListPage> {
         child: Icon(Icons.add),
       ),
     );
+  }
+  void _deleteButton(int index){
+    setState(() {
+      todoList.removeAt(index);
+    });
   }
 }
 
