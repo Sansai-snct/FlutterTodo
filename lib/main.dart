@@ -47,6 +47,15 @@ class _TodoListPageState extends State<TodoListPage> {
           return Card(
             child: ListTile(
               title: Text(todoList[index]),
+              trailing: IconButton(
+                icon: Icon(Icons.more_vert),
+                onPressed: () => showDialog(
+                  context: context,
+                  builder: (BuildContext context) => AlertDialog(
+                    title: Text(todoList[index]),
+                  ),
+                ),
+              ),
             ),
           );
         },
