@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 void main() {
   // 最初に表示するWidget
   runApp(MyTodoApp());
@@ -88,7 +87,6 @@ class _TodoListPageState extends State<TodoListPage> {
             });
           }
         },
-        child: Icon(Icons.add),
       ),
     );
   }
@@ -107,7 +105,6 @@ class TodoAddPage extends StatefulWidget {
 class _TodoAddPageState extends State<TodoAddPage> {
   // 入力されたテキストをデータとして持つ
   String _text = '';
-
   // データを元に表示するWidget
   @override
   Widget build(BuildContext context) {
@@ -166,3 +163,4 @@ class _TodoAddPageState extends State<TodoAddPage> {
     );
   }
 }
+
