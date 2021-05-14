@@ -69,7 +69,9 @@ class _TodoListPageState extends State<TodoListPage> {
           );
         },
       ),
+
       floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
         onPressed: () async {
           // pushで新規画面に遷移
           // リスト追加画面から渡される値を受け取る
